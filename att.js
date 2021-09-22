@@ -1,0 +1,49 @@
+class Residencia
+{
+    constructor(novoId,novoComodos,novoAlugada,novoEndereco)
+    {
+        this.Id = novoId;
+        this.Comodos = novoComodos;
+        this.Alugada = novoAlugada;
+        this.Endereco = novoEndereco;
+    }
+
+        liberar(){
+    this.Alugada == false
+        }
+        alugar(){
+    this.Alugada == true
+        }
+
+    }
+    
+    class Casa extends Residencia{
+        constructor(novoId,novoComodos,novoAlugada,novoEndereco,novoQuintal){
+            super(novoId,novoComodos,novoAlugada,novoEndereco)
+            this.Quintal = novoQuintal;
+        }
+
+        exibir(){
+            console.log(`Residencia é uma casa com o ID: ${this.Id} com ${this.Comodos} quartos e um quintal ${this.Quintal}
+            está localizada na ${this.Endereco} e a está ? ${this.Alugada}`)
+        }
+    }
+
+    class Apartamento extends Moradia{
+        constructor(novoId,novoComodos,novoAlugada,novoEndereco,novoAndar){
+        super(novoId,novoComodos,novoAlugada,novoEndereco)
+        this.Andar = novoAndar;
+        }
+
+            exibir(){
+            console.log(`Residencia é um aparmento com o ID: ${this.Id} com ${this.Comodos} quartos, e está no ${this.Andar} andar
+            está localizada na ${this.Endereco} e a está ? ${this.Alugada}`)
+        }
+    }
+    let casa1 = new Casa ("1",1,true,"Av 1", "Grande")
+    let ape1 = new Apartamento ("2",2,false,"Rua 2", "7")
+    
+    casa1.exibir()
+    console.log(casa1)
+    ape1.exibir()
+    console.log(ape1)
